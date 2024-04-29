@@ -26,7 +26,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import static tech.project.contactlist.constant.Constant.PHOTO_DIRECTORY;
 
 @Service
-@Slf4j
+@Slf4j  //for logs
 @Transactional(rollbackOn = Exception.class)
 @RequiredArgsConstructor
 public class ContactService {
@@ -53,6 +53,7 @@ public class ContactService {
     }
 
     public String uploadPhoto(UUID id, MultipartFile file) {
+        log.info("updating photo for user ID: {}", id);
         Contact contact = getContact(id);
         String photoUrl = photoFunction.apply(id, file);
         contact.setPhotoUrl(photoUrl);
