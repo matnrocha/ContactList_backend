@@ -20,7 +20,7 @@ import static tech.project.contactlist.constant.Constant.X_REQUESTED_WITH;
 
 @Configuration
 public class CorsConfig {
-//life is good
+//life is goo
 
     @Bean
     public CorsFilter corsFilter(){
