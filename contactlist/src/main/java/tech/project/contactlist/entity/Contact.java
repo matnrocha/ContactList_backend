@@ -26,7 +26,7 @@ public class Contact {
     private String email;
     private String title;
     private String phone;
-    private String adress;      //Usually has its own class
+    private String address;      //Usually has its own class
     private String status;
     private String photoUrl;
 
