@@ -30,10 +30,7 @@ public class ContactController {
         return ResponseEntity.created(URI.create("/contacts/userID")).body(contactService.createContact(contact));
     }
 
-    /* PARAMS
-    page = page number to display
-    size = number of contacts in each page
-    */
+
     @GetMapping
     public ResponseEntity<Page<Contact>> getContacts(@RequestParam(value = "page", defaultValue = "0") int page,
                                                      @RequestParam(value = "size", defaultValue = "10") int size) {
