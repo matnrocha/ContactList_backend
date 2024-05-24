@@ -3,7 +3,12 @@ FROM ubuntu:latest AS build
 RUN apt-get update
 RUN apt-get install openjdk-21-jdk -y
 
-COPY . .
+
+WORKDIR /contactlist
+
+COPY . /contactlist
+
+WORKDIR /contactlist/contactlist
 
 RUN apt-get install maven -y
 RUN mvn clean install
